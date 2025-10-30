@@ -1,151 +1,98 @@
-# Set Up a Local Repository with Git
+# Module 01 Mini-Project: Landing Page
 
-In this activity, we will explore configuring the local Git default branch to `main`. We will also review another way to create a repository, using the `git init` command. Lastly, we will review the `git pull` command.
+In this mini-project, you will build a landing page using HTML and CSS. While you will be responsible for your own landing page, you will work in a group to brainstorm and share ideas.
 
-Git is an important tool that allows developers to track and store versions of content. It also enables you to collaborate and share code with others. During this boot camp, you'll use Git to share code via a class repository, which you'll be required to pull down before each class. In addition, for the Challenges that aren't autograded, you'll provide a link to the GitHub repository that contains your code.
+## Instructions
 
-For more information, review the [Full-Stack Blog guide on getting started with Git](https://coding-boot-camp.github.io/full-stack/git/getting-started-with-git).
+Work in your group to implement the following user stories:
 
-## Configure Local Git Default Branch to main
+* As a client, I want to view a single webpage that collects a visitor's contact information.
 
-First we need to set the local Git default branch to `main`.
+* As a client, I want the landing page to have a header and footer.
 
-Historically, the most common name for the main body of a codebase has been `master`. However, `main` has been gaining in popularity. In fact, GitHub now uses `main` as the default name for its repositories&mdash;as do the projects in this course.
+* As a client, I want the landing page to have an image with a caption.
 
-While GitHub has changed their default branch conventions, your local machine will still initialize projects using the `master` branch. Therefore, you'll need to manually change it to `main`.
+* As a client, I want the landing page to have a contact form.
 
-> **Important:** If you've already configured your local default branch to `main`, you don't need to repeat this step.
+* As a client, I want the landing page to have a polished and accessible UI.
 
-To check the version of Git that you have installed on your local machine, enter the following command in the command line:
+## Acceptance Criteria
 
-  ```bash
-  git --version
-  ```
+* It's done when the page uses semantic HTML elements.
 
-If your version of Git is 2.28 or older, you'll first need to update Git.
+* It's done when the page uses universal, element, and class selectors in CSS.
 
-* Windows users can visit the [Downloading Git website](https://git-scm.com/download/win) and download the latest "64-bit Git for Windows Setup" file.
+* It's done when the page features at least three colors in the design.
 
-* Mac users can use Homebrew to update their version of Git:
+* It's done when the page uses a single font and font family for all text.
 
-  ```bash
-  brew upgrade git
-  ```
+* It's done when the page uses at least two heading elements (`<h1>` through `<h6>`).
 
-To set the default branch to `main`, both Windows and Mac users will run the following command:
+* It's done when the header is fixed to the top of the page on scroll.
 
-  ```bash
-  git config --global init.defaultBranch main
-  ```
+* It's done when the header contains a navigation bar with three links that display inline, including a contact link.
 
-You will not get a confirmation message. If the configuration is successful, it will simply return to the command-line prompt.
+* It's done when, if the contact link is clicked, the page jumps directly to the contact form.
 
-## Initialize a Local Repository
+* It's done when the contact form includes `input` elements for name and email.
 
-We already learned how to create a remote repository on GitHub and clone it onto the local machine. This time, let's initialize a new repository locally using the `git init` command.
+* It's done when the contact form includes a Send button.
 
-Using `git init` also allows us to turn any existing project into a Git repository easily.
+* It's done when the image includes a descriptive `alt` attribute.
 
-Start by creating a new project directory named `git-init-sample` on your local machine. Ideally, you should have a parent directory to store all of your projects for this course:
+* It's done when the page is deployed to GitHub Pages.
 
-  ```bash
-  mkdir git-init-sample
-  ```
+## Sample Page
+* The following screenshot is provided as an **example** of what you can do, but be creative! As long as you complete all of the acceptance criterions, any landing page is acceptable. 
 
-Next, use `cd` to navigate into the new directory and add an `index.html` file using the `touch` command:
+* Note: The **Coming Soon box** is an image that is provided in the `assets/image-1.png` directory. 
 
-  ```bash
-  cd git-init-sample
-  touch index.html
-  ```
+![The landing page contains a header, footer, a main section page with an image provided to display in the middle of the screen. Some text and a Contact Me form is also included.](./assets/images/sample-page.png)
 
-To initialize this folder as a Git repository, use `git init`. We need to be in the project folder when we run this command!
+## 💡 Notes
 
-  ```bash
-  git init
-  ```
+Follow these instructions to deploy your project to GitHub Pages:
 
-This creates a new subdirectory named `.git` that contains all of your necessary repository files&mdash;a Git repository skeleton. At this point, nothing in your project is tracked yet. To start version-controlling the existing files in your project, you need to start tracking those files and do an initial commit.
+1. Create a new repository on your GitHub account and clone it to your computer.
 
-First let's run `git status` to check the status of the files:
+2. When you're ready to deploy, use the `git add`, `git commit`, and `git push` commands to save and push your code to your GitHub repository.
 
-  ```bash
-  git status
-  ```
+3. Navigate to your GitHub repository in the browser and then select the Settings tab on the right side of the page.
 
-We should see that `index.html` is currently untracked. Let's add that file to be tracked:
+4. On the Settings page, select Pages on the left side of the page. On the GitHub Pages screen, choose `main` in the dropdown under Branch. Click the Save button.
 
-  ```bash
-  git add -A
-  ```
+5. Navigate to <your-github-username.github.io/your-repository-name> and you will find that your new webpage has gone live! For example, if your GitHub username is "lernantino" and the project is "css-demo-site", then your URL would be <lernantino.github.io/css-demo-site>.
 
-Now if we run `git status` again, we should see that the file is being tracked and is ready to be committed:
+> **Important**: It might take a few minutes for GitHub pages to display your site correctly. If your project does not deploy or display correctly, check that all file paths in your application are relative and use the right casing. GitHub is case-sensitive, an incorrect capital or lowercase letter could cause problems in deployment.
 
-  ```bash
-  git commit -m "initial commit"
-  ```
+## 💡 Hints
 
-Now we are ready to connect the local repository to a remote repository on GitHub!
+Refer to the documentation:
 
-To create a remote repository to store the code, navigate to [GitHub](https://github.com/) and create a new repository by clicking on the green New button at the top left, selecting your user from the "Owner" dropdown, and entering the project name, `git-init-sample`, in the "Repository Name" box.
+* [MDN Web Docs on HTML elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element)
 
-> **Important**: Because we are importing an existing repository, make that sure none of the options are checked!
+* [MDN Web Docs on color](https://developer.mozilla.org/en-US/docs/Web/CSS/color)
 
-Click the "Create Repository" button. Then copy the code under the header "…or push an existing repository from the command line". It should look like the following example:
+* [MDN Web Docs on font](https://developer.mozilla.org/en-US/docs/Web/CSS/font)
 
-  ```bash
-  git remote add origin <the HTTPS or SSH URL ending in .git>
-  git branch -M main
-  git push -u origin main
-  ```
+* [MDN Web Docs on HTML section heading elements](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/Heading_Elements)
 
-> **Note**: If you successfully set your local default branch to `main`, you do not have to run the `git branch -M main` command.
+* [MDN Web Docs on how to structure a web form](https://developer.mozilla.org/en-US/docs/Learn/Forms/How_to_structure_a_web_form)
 
-Paste the commands into the command line and press Enter.
+* [MDN Web Docs on the button element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button)
 
-If successful, you should see a message that looks like the following image:
+* [MDN Web Docs on the figure element](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/figure)
 
-![A message indicates that the project directory has been successfully imported.](./assets/image-8.png)
+* [Full-Stack Blog HTML Cheatsheet](https://coding-boot-camp.github.io/full-stack/html/html-cheatsheet)
 
-## Pull Changes from the Remote Repository
+## 🏆 Bonus
 
-Before each class, it is important that we do a `git pull` to pull down any changes and activity files from the student repository to the local machine. Let's review how to do just that.
+If you have completed this activity, work through the following challenge with your group to further your knowledge:
 
-To perform a `git pull`, first navigate to the corresponding project directory, which in this case will be `git-init-sample`:
+* How can CSS be used to apply a different style to an `<a>` element when a cursor points at it?
 
-  ```bash
-  cd git-init-sample
-  ```
-
-Next, use `git pull` to pull down any changes from the remote `git-init-sample` repository. Just like when we did a `git push`, we use `origin` to represent the original directory&mdash;or more precisely the original repository's URL&mdash;followed by the name of the branch, which is `main`:
-
-  ```bash
-  git pull origin main
-  ```
-
-Right now, the local repository is up to date with the remote repository, so you'll get a message that says "Already up to date". This means that the local version of your repository is up to date with the remote version being hosted on GitHub.
-
-If the remote repository has changes that you don't have locally, you will get a message that lists the changes made, similar to the one shown in the following image:
-
-![A message indicates that changes have been made from the remote repository.](./assets/image-9.png)
-
-Both messages indicate that the `git pull` command has been successfully performed.
-
-You can review the changed files by opening them in VS Code.
-
-## Share Remote Repository URL
-
-For each module's Challenge, you'll be required to share the URL of your repository.
-
-To share the URL, navigate to your repository on GitHub. Then copy the URL from the address bar and share it with your partner in Slack. To view your partner's repository, simply click on the shared link.
-
-## Notes
-
-Ask an instructor or TA if you get stuck or have any questions!
-
-For more information, refer to the [Atlassian guide on setting up a repository](https://www.atlassian.com/git/tutorials/setting-up-a-repository).
-
-For more information, read the [Atlassian guide on git pull](https://www.atlassian.com/git/tutorials/setting-up-a-repository/git-config).
+Use [Google](https://www.google.com) or another search engine to research this.
 
 ---
+
 © 2024 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.

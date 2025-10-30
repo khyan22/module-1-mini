@@ -1,0 +1,29 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  --primary-bg: hsl(39 100% 86%);
+  --secondary-bg: hsl(129, 60%, 25%);
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+  background-color: var(--secondary-bg)
+}
+
+.h1-flex {
+}
+
+.nav-flex {
+}
+
+ul { 
+  list-style: none;
+  display: flex;
+}
+
+main {
+  background-color: var(--primary-bg);
+}
