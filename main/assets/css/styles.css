@@ -1,4 +1,5 @@
 * {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   margin: 0px;
   padding: 0px;
   border: 0px;
@@ -21,7 +22,6 @@ header {
 
 a {
   text-decoration: none;
-  color: var(--primary-bg);
 }
 
 .header-flex-a {
@@ -33,6 +33,7 @@ a {
 .header-flex-a h1 {
   margin-left: 15px;
   font-size: 40px;
+  color: var(--primary-bg);
 }
 
 nav {
@@ -62,10 +63,11 @@ ul {
 .nav-buttons a {
   width: 100%;
   height: 100%;
-  padding: 5px;
+  padding: 8px;
   border-radius: 5px;
   color: var(--primary-bg);
   background-color: var(--tertiary-bg);
+  cursor: pointer;
 }
 
 .nav-buttons a:hover {
@@ -86,15 +88,15 @@ main {
 }
 
 .main-flex-p {
-  width: 400px;
+  width: 500px;
   margin-right: 50px;
+  font-size: 25px;
 }
 
 .main-flex-sect {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  /* align-items: center; */
   height: 100%;
 }
 
@@ -115,5 +117,69 @@ main {
 
 #contact {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  background-color: var(--primary-bg);
+}
+
+#contact h2 {
+  width: 700px;
+  text-align: center;
+  font-size: 30px;
+  margin-block: 30px;
+  border-bottom: 3px solid var(--tertiary-bg);
+}
+
+.contact-flex-section {
+  display: flex;
+  justify-content: center;
+}
+
+.contact-flex-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact-flex-form input {
+  margin: 15px 30px;
+  border: 3px solid var(--tertiary-bg);
+  border-radius: 5px;
+}
+
+.contact-flex-form input, textarea {
+  background-color: var(--primary-bg);
+}
+
+.contact-flex-form button {
+  margin-block: 30px;
+  cursor: pointer;
+  color: var(--primary-bg);
+  background-color: var(--tertiary-bg);
+  width: 44%;
+  border-radius: 5px;
+}
+
+.contact-flex-info {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-around; */
+}
+
+.contact-flex-info p{
+ margin-bottom: 20px;
+}
+
+footer {
+  color: var(--primary-bg);
+  background-color: var(--secondary-bg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer p {
+  margin-block: 7px;
 }
